@@ -1,7 +1,7 @@
 import { FunctionalComponent } from 'preact';
 import { definePage } from 'microsite/page';
 import { Head, seo } from 'microsite/head';
-import { GlobalState } from '@/components/GlobalState';
+import GlobalState from '@/components/GlobalState';
 
 interface IndexProps {}
 

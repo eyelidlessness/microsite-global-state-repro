@@ -2,12 +2,13 @@ import {
   createGlobalState,
   useGlobalState,
 } from 'microsite/global';
+import { withHydrate } from 'microsite/hydrate';
 
 const state = createGlobalState({
   count: 0,
 });
 
-export const GlobalState = () => {
+const GlobalState = withHydrate(() => {
   const { count } = useGlobalState(state);
 
   return (
@@ -16,4 +17,6 @@ export const GlobalState = () => {
       <button onClick={ () => state.count++ }>+</button>
     </p>
   );
-};
+});
+
+export default GlobalState;
